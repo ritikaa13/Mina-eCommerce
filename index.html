@@ -1,0 +1,651 @@
+<html lang="en">
+
+<head>
+  <title>Mina</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    body{
+      background-color: rgb(250, 247, 247);
+    }
+    .container {
+      position: relative;text-align: center;color: white;
+    }
+    @media(min-width:320px) and (max-width:480px) {
+      .centered{
+        font-size: 45px;
+        font-size: small;
+      }
+      #naam{
+        font-size: 20px;
+      }
+      #six{
+        color: black; font-size: 13px;margin-left: -171px;margin-top: 40px;position: absolute;
+      }
+      #nul{
+        top: 379%;left: 50%;
+      }
+      #button{
+        top: 386%;left: 19%;
+      }
+      .container {
+        position: relative;text-align: center;color: white;
+      }
+      .centered {
+        position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);
+      }
+      #nan{
+        background-color: white;color: purple; height: 30px; width: 80px; border: none; border-radius: 10px; font-size: 9px;margin-left: 30px;
+      }
+      #king{
+        font-size: 15px;color:rgb(255, 255, 255);text-align: center;margin-top: -100px;
+      }
+      #ran{
+        color: white;text-align: center;font-size: 6px; margin-top:8px;
+      }
+      .head{
+        position: absolute;top: 2500px;left: 150px;transform: translate(-50%, -50%);text-align: center;
+      }
+      #six{
+        font-size: 25px; color: rgb(255, 255, 255); font-family:sans-serif; text-align: center; font-weight: 550;transform: translate(-50%, -50%);
+      }
+      #nul{
+        text-align: center;position: absolute;color: rgb(255, 255, 255);transform: translate(-50%, -50%);top: 2249px;left: 50%;font-size: 11px;
+      }
+      #button{
+        background-color: white;color: purple; text-align: center;position: absolute; padding: 10px; border: solid white; padding-left: 24px; padding-right: 24px; border-radius: 15px; font-size: 10px;top: 2260px;left: 33%;
+      }
+      #win{
+        font-size: 18px; color: rgb(255, 255, 255); font-family:sans-serif;text-align: center;position: absolute; font-weight: 560;    top: 3634px;left: 53px;
+      }
+      #nameform{
+        margin-top:-380px; left: 50%;transform: translate(-50%, -50%);position: absolute;
+      }
+      #fname{
+        height: 29px;width: 191px;
+      }
+      #ok{
+        background-color: white;color: purple; text-align: center;position: absolute; left: 100px; padding: 16px; border: solid white; padding-left: 40px; padding-right: 40px; border-radius: 15px;font-size: 12px;top: 3800px;
+      }
+      #tin{
+        height: 80px;text-align: center; margin-top: 120px;
+      }
+      #jam{
+        position:relative;top: 50%;left: 50%;transform: translate(-50%, -50%);
+      }
+      #ele{
+        background-color: rgb(69, 2, 69); text-align: center; padding: 12px; border: solid white; padding-left: 45px; padding-right: 45px; border-radius: 15px; font-size: 14px; color: white; margin-left:264px; margin-top: 58px;
+      }
+      #kal{
+        position:relative;top:-40px;left: -40px;transform: translate(-50%, -50%);
+      }
+      footer{
+        background-color: rgb(240, 240, 240); height: 280px;margin-top: 160px;
+      }
+      .navbar-brand{
+        color: black; font-weight: 750; font-size: 15px;margin-top: 100px;top: 90px;margin-left: -40px;
+      }
+      .navbar-brand-text{
+        margin-left: 20px;text-decoration: none; font-size: 15px;font-weight: 800;color: black;
+      }
+      #lamp{
+        height: 80px;background-color: rgb(235, 252, 8);
+      }
+      .navbar-toggler{
+        float: left;
+      }
+      .centered-3 img{
+        width: 100%;height: 700px; margin-top: 60px;
+      }
+      .card-title{
+        color: black; font-weight: 560;font-size: 25px; text-decoration: none; padding: 13px; margin-top: 20px;;text-align: center; margin-left: 8px;
+      }
+      .card-text{
+        font-size: 18px; text-align: center; margin-top: -10px;
+      }
+      #ni{
+        font-size: 25px; font-weight: bold; color: black;text-align: center;
+      }
+      #but{
+        background-color: rgb(69, 2, 69); text-align: center; padding: 15px; border: solid white; padding-left: 50px; padding-right: 50px; border-radius: 15px; font-size: 18px; color: white; margin-top: 18px;margin-left: 20px;
+      }
+    }
+      
+    @media(min-width:480px) and (max-width:666px) {}
+    @media(min-width:768px) and (max-width:991px) {
+      .container {
+        position: relative;text-align: center;color: white;
+      }
+      .centered {
+        position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);
+      }
+      #nan{
+        background-color: white;color: purple; height: 60px; width: 160px; border: none; border-radius: 10px; font-size: 18px;margin-left: 100px;
+      }
+      #king{
+        font-size: 35px;color: white;text-align: center;margin-top: -17px;margin-left: 18px;
+      }
+      #ran{
+        color: white;text-align: center;
+      }
+      .head{
+        position: absolute;top: 1850px;left: 390px;transform: translate(-50%, -50%);text-align: center;
+      }
+      #six{
+        font-size: 45px; color: rgb(255, 255, 255); font-family:sans-serif; text-align: center; font-weight: 550; transform: translate(-50%, -50%)absolute; margin-top: 190px; margin-left: -630px;
+      }
+      #nul{
+        text-align: center;position: absolute;color: rgb(255, 255, 255);transform: translate(-50%, -50%);    top: 1773px;left: 44%;font-size: 18px;
+      }
+      #button{
+        background-color: white;color: purple; text-align: center;position: absolute; padding: 20px; border: solid white; padding-left: 50px; padding-right: 50px; border-radius: 15px; font-size: 11px;top: 1796px;left: 34%;
+      }
+      #win{
+        font-size: 50px; color: rgb(255, 255, 255); font-family:sans-serif;text-align: center;position: absolute; font-weight: 560;top: 3170px;left: 61px;
+      }
+      #nameform{
+        margin-top:-358px; left: 50%;transform: translate(-50%, -50%);position: absolute;
+      }
+      #fname{
+        height: 48px; width: 380px;
+      }
+      #ok{
+        background-color: white;color: purple; text-align: center;position: absolute; left: 320px; padding: 16px; border: solid white; padding-left: 40px; padding-right: 40px; border-radius: 15px; font-size: 18px;top:  3367px;
+      }
+      #tin{
+        height: 200px; text-align: center;margin-top: 220px;
+      }
+      #jam{
+        position:relative;top: 50%;left: 50%;transform: translate(-50%, -50%);
+      }
+      #ele{
+        background-color: rgb(69, 2, 69); text-align: center; padding: 12px; border: solid white; padding-left: 45px; padding-right: 45px; border-radius: 15px; font-size: 18px; color: white; margin-left: -40px;
+      }
+      #kal{
+        position:relative;top: -70px;transform: translate(-50%, -50%);margin-left: 460px;
+      }
+      footer{
+        background-color: rgb(240, 240, 240); height: 280px;margin-top: 60px;
+      }
+      .navbar-brand{
+        color: black; font-weight: 750; font-size: 35px;margin-top: 100px;top: 90px;margin-left: -160px;
+      }
+      #why{
+        padding: 8px; font-size: 19px;margin-top: 520px;    margin-top: 67px;
+      }
+      .navbar-brand-text{
+        margin-left: 20px;text-decoration: none; font-size: 20px;font-weight: 800;color: black;
+      }
+      #lamp{
+        height: 80px;background-color: rgb(0, 228, 53);
+      }
+      .navbar-toggler{
+        margin-left: 500px;
+      }
+      .centered-3 img{
+        width: 100%;height: 700px; margin-top: 60px;
+      }
+      .card-title{
+        color: black; font-weight: 560;font-size: 25px; text-decoration: none; padding: 13px; margin-top: 20px;;text-align: left; margin-left: 8px;
+      }
+      .card-text{
+        font-size: 18px; text-align: left; margin-top: -10px;
+      }
+      #but{
+        background-color: rgb(69, 2, 69); text-align: center; padding: 15px; border: solid white; padding-left: 50px; padding-right: 50px; border-radius: 15px; font-size: 18px; color: white; margin-top: 18px;margin-left: 20px;
+      }
+      #ni{
+        font-size: 48px; font-weight: bold; color: black;text-align: center;
+      }
+    }
+
+    @media(min-width: 1024px) and (max-width:1440px) {
+      .container {
+        position: relative;
+        text-align: center;
+        color: white;
+      }
+      /* #pott{
+        filter: brightness(50%);
+      } */
+      .centered {
+        position: absolute;top: 65%;left: 50%;transform: translate(-50%, -50%);
+      }
+      #lamp{
+        height: 80px;background-color: white;
+      }
+      #nan{
+        background-color: white;color: purple; height: 60px; width: 160px; border: none; border-radius: 10px; font-size: 18px;margin-left: 220px;
+      }
+      #king{
+        font-size: 65px;color: white;text-align: center;margin-top: -60px;
+      }
+      #ran{
+        color: white;text-align: center;
+      }
+      .head{
+        position: absolute;top: 1550px;left: 590px;transform: translate(-50%, -50%);text-align: center;
+      }
+      #six{
+        font-size: 65px; color: rgb(255, 255, 255); font-family:sans-serif; text-align: center; font-weight: 550;transform: translate(-50%, -50%);margin-top: -70;position: absolute; margin-top: 190px;margin-left: -630px;
+      }
+      #nul{
+        text-align: center;position: absolute;top: 1550px; left: 50%; font-size: 25px;color: rgb(255, 255, 255);transform: translate(-50%, -50%);
+      }
+      #button{
+        background-color: white;color: purple; text-align: center;position: absolute;top:1600px; left: 43%; padding: 20px; border: solid white; padding-left: 50px; padding-right: 50px; border-radius: 15px; font-size: 18px;
+      }
+      .option{
+        position: absolute;top: 2750px;transform: translate(-50%, -50%);text-align: center;left: 590px;
+      }
+      #win{
+        font-size: 50px; color: rgb(255, 255, 255); font-family:sans-serif;text-align: center;position: absolute; font-weight: 560;top: 2750px;left: 340px;
+      }
+      #nameform{
+        margin-top: -350px; left: 50%;transform: translate(-50%, -50%);position: absolute;
+      }
+      #fname{
+        height: 48px; width: 380px;
+      }
+      #ok{
+        background-color: white;color: purple; text-align: center;position: absolute; left: 560px; padding: 16px; border: solid white; padding-left: 40px; padding-right: 40px; border-radius: 15px; font-size: 18px;top: 2960px;
+      }
+      #tin{
+        height: 380px; text-align: center;
+      }
+      #ele{
+        background-color: rgb(69, 2, 69); text-align: center; padding: 12px; border: solid white; padding-left: 45px; padding-right: 45px; border-radius: 15px; font-size: 18px; color: white; margin-left:264px; margin-top: 58px;
+      }
+      #kal{
+        position:relative;top: 40px;transform: translate(-50%, -50%);margin-left: 650px;
+      }
+      .navbar-brand{
+        color: black; font-weight: 750; font-size: 35px;margin-top: 100px;top: 90px;margin-left: -160px;
+      }
+      footer{
+        background-color: rgb(240, 240, 240); height: 280px;margin-top: 60px;
+      }
+      #hii{
+        margin-left: 0px;
+      }
+      #rii{
+        margin-left: 17px;
+      }
+      #fii{
+        margin-left: 17px;
+      }
+      footer{
+        background-color: rgb(240, 240, 240); height: 280px;margin-top: 35px;
+      }
+      #why{
+        padding: 7px; font-size: 19px;margin-top: 520px;
+      }
+      .navbar-brand-text{
+        margin-left: 20px;text-decoration: none; font-size: 30px;font-weight: 800;color: black;margin-right: 630px;
+      }
+      #we{
+        font-size: 16px; font-weight: 540;padding-top: 10px;letter-spacing: 1px;color: black; background-color: white;
+      }
+      .centered-2{
+        width: 100%;height: 700px; margin-top: 60px;
+      }
+      .centered-3{
+        height: 700px; width: 100%;
+      }
+      .centered-3 img{
+        width: 100%;height: 700px; margin-top: 60px;
+      }
+      .card-title{
+        color: black; font-weight: 560;font-size: 25px; text-decoration: none; padding: 13px; margin-top: 20px;;text-align:center; margin-left: 8px;
+      }
+      .card-text{
+        font-size: 18px; text-align: center; margin-top: -10px;
+      }
+      #jam{
+        top: 180px;left: 280px;
+      }
+      #nineth{
+        text-align: center;margin-top:140px; margin-bottom: 60px;
+      }
+      #but{
+        background-color: rgb(69, 2, 69); text-align: left; padding: 15px; border: solid white; padding-left: 50px; padding-right: 50px; border-radius: 15px; font-size: 18px; color: white; margin-top: 18px;margin-left: 20px;
+      }
+      #ni{
+        font-size: 48px; font-weight: bold; color: black;
+      }
+      
+    }
+    
+    #ll{
+        font-size: 16px; font-weight: 540;padding-top: 10px;text-align: center;letter-spacing: 1px; color: black;background-color: white;
+    }
+    #yy{
+        font-size: 16px; font-weight: 540;padding-top: 10px;text-align: center;letter-spacing: 1px;color: black;background-color: white;
+    }
+    #my{
+        font-size: 16px; font-weight: 540;padding-top: 10px;text-align: center;letter-spacing: 1px;color: black;background-color: white;
+    }
+    #st{
+        color: white; 
+        background-color: rgb(73, 2, 95); 
+        font-size: 14px; 
+        height: 62px; 
+        font-weight: 520; 
+        text-align: center; 
+        padding: 20px;
+        letter-spacing: 0.5px;
+        width: 100%;
+        margin-top: 42px;
+    }
+    #second{
+        height: 650px; width: 100%; text-align: center;
+    }
+    #man{
+        text-align: center;position: absolute; font-size: 24px;color: white;top: 70%;left: 50%;transform: translate(-50%, -50%);
+    }
+    #maan{
+        text-align: center;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        color: black;
+    }
+    #naam{
+        font-size: 48px; 
+        font-weight: bold;
+        color: black;
+    }
+    .card-img-top{
+        width:100%; height: 280px;
+    }
+    #mil{
+        width: 100%;height: 650px; margin-top: 90px;
+    }
+
+    #img-e{
+        height: 600px; width: 100%; margin-top: 80px;
+    }
+
+  </style>
+
+</head>
+
+<header>
+  <nav class="navbar navbar-expand-lg" style="height: 20px; padding-top: 30px; width: 90%;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; padding-left: 200px; padding-bottom: 80px;"><B>MINA</B></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle shop1" href="#" role="button" data-bs-toggle="dropdown" id="link-n" style="padding-left: 900px; padding-top: 25px;">Shop</a>
+            <ul class="dropdown-menu" style="margin-left: 850px;">
+              <li > <a class="dropdown-item" href="#">All Products</a></li>
+              <li > <a class="dropdown-item" href="#">New collections</a></li>
+            </ul>
+          </li>  
+
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#" id="link-n">Sustainability</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="link-n" style=" padding-top: 25px;">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"id="link-n" style=" padding-top: 25px;">Contact</a>
+          </li> 
+        </ul>
+
+      </div>
+      <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#" id="cart" style="padding-right: 50px; padding-top: 25px;"> <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                height="15" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                <path
+                  d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />               
+              </svg></a>
+          </li>
+      </ul>
+  
+    </div>
+  </nav>
+</header>
+
+<body>
+  <div>
+     <!--1st-->
+    <h1 class="col-lg-12 col-md-12 col-sm-12" id="st" 
+    style="text-align: center;
+          background-color: rgb(65, 9, 108);
+          color: rgb(244, 244, 236);
+          font-size: larger;
+          height: 70px;
+          padding-top: 20px;
+          width:100%;
+        ">
+      Free shipping on orders over $50 amount
+    </h1>
+
+     <!--2nd-->
+    <img src="../Mina/assets/1.jpeg" style="height: 540px; width: 100%; margin-top: -8px">
+
+    <h1 class="col-lg-12" id="king"
+     style="text-align: center;
+          margin-top: -360px;
+          color: aliceblue;
+          font-size: 80;
+          font-style: inherit;
+        ">
+      <b>Handmade ceramics</b>
+    </h1>
+
+    <h1 id="ran" style="
+          text-align: center;
+          margin-top: 0px;
+          color: aliceblue;
+          font-size: larger;
+        ">
+      Painted clay ceramics made with love.
+    </h1>
+
+    <button type="button" class="btn btn-light" id="nan"
+    style="height: 40px;
+          margin-left: 590px;
+          margin-top: 20px;
+          color: rgb(65, 9, 108);
+        ">
+      Shop now
+    </button>
+    
+  </div>
+
+   <!--3rd-->
+  <div>
+    <h1 id="maan" style="
+          color: black;
+          text-align: center;
+          padding-top: 200px;
+          font-size: 50px;
+        ">
+      Our bestsellers
+    </h1>
+  </div>
+
+   <!--4th-->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <img src="../Mina/assets/2.jpg" style="height: 350px; padding-top: 50px; margin-right: 50px" />
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <img src="../Mina/assets/3.jpg" style="height: 350px; padding-top: 50px; margin-left: 0px" />
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <img src="../Mina/assets/4.jpg" style="height: 350px; padding-top: 50px" />
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <img src="../Mina/assets/5.jpg" style="height: 350px; padding-top: 50px; margin-left: 0px" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-12" style="text-align: center; padding-top: 20px">
+        <h style="color: black; font-size: 25px"><b>'Candy' Flowerpot</b></h>
+        <p style="color: black;"><del>$59.90 </del>$49.90</p>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-12" style="text-align: center; padding-top: 20px">
+        <h style="color: black; font-size: 25px"><b>'Drop' Vase</b></h>
+        <p style="color: black;"><del>$49.90 </del>$40.09</p>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-12" style="text-align: center; padding-top: 20px">
+        <h style="color: black; font-size: 25px"><b>'Wave' Vase</b></h>
+        <p style="color: black;">SOLD OUT</p>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-12" style="text-align: center; padding-top: 20px">
+        <h style="color: black; font-size: 25px"><b>'Sun' Vase</b></h>
+        <p style="color: black;">$69.90</p>
+      </div>
+    </div>
+  </div>
+
+   <!--5th-->
+  <div class="col-lg-12 col-md-12 col-sm-12">
+    <img src="../Mina/assets/6.jpg" style="height: 540px; width: 100%; padding-top: 100px;" id="pott" />
+    <h1 style="
+          text-align: center;
+          margin-top: -320px;
+          color: aliceblue;
+          background-color: antiquewhite;
+          font-size: 80;
+          font-style: inherit;
+        ">
+      <b>Home decor items</b>
+    </h1>
+    <h1 style="
+          text-align: center;
+          margin-top: 0px;
+          color: aliceblue;
+          font-size: larger;
+        ">
+      Find your new favorite pieces.
+    </h1>
+    <button type="button" class="btn btn-light" style="
+          height: 40px;
+          margin-left: 610px;
+          margin-top: 20px;
+          color: rgb(65, 9, 108);
+        ">
+      Shop now
+    </button>
+  </div>
+
+  <!--6th-->
+  <div class="container">
+    
+    <div class="row" style="margin-top: 250px">
+      <div class="col-lg-6">
+        <img src="../Mina/assets/7.jpg" style="width: 600px; height: 350px;">
+      </div>
+
+      <div class="col-lg-6">
+        <img src="../Mina/assets/8.jpg" style="width: 600px; height: 350px; padding-right: 30px;">
+      </div>
+    </div>
+
+    <div class="row">     
+      <div class="col-lg-6 col-md-12 col-sm-12" style="text-align: left; padding-top: 10px; padding-left: 20px;">
+        <h1 style="color: black;">About Mina</h1>
+        <p style="font-size: 20px; color: black;">Mina is a brand born out of a passion for ceramics.</p>
+        <button type="button" class="btn btn-outline-dark">Learn more</button>
+      </div>
+
+      <div class="col-lg-6 col-md-12 col-sm-12" style="text-align: left; padding-top: 10px; padding-left: 20px;">
+        <h1 style="color: black;">Sustainability</h1>
+        <p style="font-size: 20px; color: black;">Mina is an eco-friendly brand that cares about sustainability.</p>
+        <button type="button" class="btn btn-outline-dark">Learn more</button>
+      </div>      
+    </div>
+
+  </div>
+
+  <!--7th-->
+  <div class="col-lg-12 col-md-12 col-sm-12" >
+    <img src="../Mina/assets/9.jpg" style="height: 570px; width: 100%; padding-top: 60px;"> 
+    <h1 style="
+    text-align: right;
+    margin-top: -385px;
+    color: rgb(142, 154, 135);
+    font-size: 80;
+    font-style: inherit;
+    margin-right: 20px;
+    "><b>Sign-up for our newsletter</b></h1>  
+    
+    <form action="/action_page.php">
+      <!-- <label for="lname" style="margin-left: 650px; color: white;"><b>Email*</b></label><br> -->
+      <input type="text" placeholder="Email address" name="lname" style="margin-left: 700px; padding: 10px; border-radius: 8px; border:0px; margin-top: 30px;"><br><br>
+      <button type="button" class="btn btn-light" style=" text-align: center; margin-left: 700px; margin-top: -10px;">submit</button>      
+    </form>
+
+  </div>
+
+  <!--8th-->
+  <div id="nineth" class="col-lg-12 col-md-12 col-sm-12" style="text-align: center; margin-top: 250px;">
+    <h1>Follow us on Instagram</h1>
+  </div>
+
+  <!--9th-->
+  <div class="container">
+  <div class="row" id="jam" class="col-lg-4 col-md-4 col-sm-4"  style="margin-top: 50px;">
+    
+    <div class="col-lg-4">
+        <img src="../Mina/assets/10.jpg" style="height: 350px; width: 100%;" id="tin">
+    </div>
+    <div class="col-lg-4">
+        <img src="../Mina/assets/11.jpg" style="height: 350px; width: 100%;"id="tin">
+    </div>
+    <div class="col-lg-4">
+        <img src="../Mina/assets/12.jpg" style="height: 350px; width: 100%;"id="tin">
+    </div>
+    
+  </div>
+</div>
+
+<!--10th-->
+<div id="kal" class="col-lg-12" style="text-align: center; margin-top: 30px; font-size: 70px;">
+  <button type="button" class="btn btn-primary">@mina_studio</button>
+</div>
+
+</body>
+
+<footer>
+  <div>
+    <div class="row" style="padding-left: 150px; padding-top: 100px; width: 99%; margin-left: 6px; margin-top: 110px; background-color:darkgray; height: 280px;">
+        <div class="col-lg-2 col-md-12 col-sm-12">
+            <a class="navbar-brand" href="#" style="padding-left: 180px;">MINA<br></a>
+            <svg xmlns="http://www.w3.org/2000/svg" height="2em" id="hii" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="2em" id="rii" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="2em" id="fii" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+            </div>
+        <div class="col-lg-6"></div>
+        <div class="col-lg-4 col-md-12 col-sm-12" >
+            <a href="#" style="color: black;" id="why"><u>Contact</u></a>
+            <br>
+            <a href="#" style="color: black;" id="why"><u>Returns</u></a>
+            <br>
+            <a href="#" style="color: black;" id="why"><u>Payment & Delivery</u></a>
+        </div>
+    </div>
+</div>
+            
+</footer>
+</html>
